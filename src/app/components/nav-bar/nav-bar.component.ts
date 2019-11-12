@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -6,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
+  public ref: string = "";
+  private router: Router;
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
   ngOnInit() {
+    this.ref = this.router.url;
   }
 
 }
